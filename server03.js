@@ -4,7 +4,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const cars = new Dataset({
     filename: 'cars.db',
