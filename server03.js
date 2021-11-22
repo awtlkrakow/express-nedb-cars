@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const cars = new Dataset({
-    filename: 'cars.db',
+    filename: 'db/cars.db',
     autoload: true
 });
 
