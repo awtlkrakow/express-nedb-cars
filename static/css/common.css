@@ -1,0 +1,67 @@
+body {
+    font-family: monospace;
+}
+
+#container {
+    padding: 1.5rem;
+}
+
+.title {
+    color: black;
+    margin: .5rem;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.form-title {
+    color: gray;
+    text-decoration: underline;
+}
+
+th, label {
+    color: blue;
+}
+
+.control-style {
+    --control-style-color: blue;
+    color: var(--control-style-color);
+    border: 2px solid var(--control-style-color);
+    border-radius: 0.5rem;
+    background-color: rgb(233, 233, 233);
+    margin: 0.25rem;
+    padding: 0.125rem 0.25rem;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.control-style-red {
+    --control-style-color: red;
+}
+
+.control-style-magenta {
+    --control-style-color: magenta;
+}
+
+.control-style2 {
+    color: blue;
+    border: 1px solid blue;
+    background-color: whitesmoke;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.ml-16 {
+    margin-left: 4rem;
+}

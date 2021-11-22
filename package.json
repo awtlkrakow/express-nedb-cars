@@ -1,0 +1,18 @@
+{
+  "name": "expressdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Me",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.5",
+    "nedb": "^1.8.0"
+  }
+}

@@ -1,0 +1,37 @@
+<div id="container">
+    <h1 class="title">NeDB kars</h1>
+
+    <div class="flex flex-row">
+        <form method="POST" action="/addVehicle">
+            <h3 class="form-title">Vehicle data:</h3>
+
+            <table>
+                <tbody>
+                    <tr><td><label for="cb-insured">ubezpieczony:</label></td><td><input id="cb-insured" type="checkbox" name="insured"></td></tr>
+                    <tr><td><label for="cb-gas">benzyna:</label></td><td><input id="cb-gas" type="checkbox" name="gas"></td></tr>
+                    <tr><td><label for="cb-broken">uszkodzony:</label></td><td><input id="cb-broken" type="checkbox" name="broken"></td></tr>
+                    <tr><td><label for="cb-fxf">napęd 4x4:</label></td><td><input id="cb-fxf" type="checkbox" name="fxf"></td></tr>
+                </tbody>
+            </table>
+
+            <input class="control-style" type="submit" value="ADD TO DATABASE">
+        </form>
+        <div class="ml-16" >
+            <h3 class="form-title">All vehicles:</h3>
+
+            <table>
+                <thead>
+                    <tr><th></th><th>ubezpieczony</th><th>benzyna</th><th>uszkodzony</th><th>napęd 4x4</th><th></th></tr>
+                </thead>
+                <tbody>
+                    {{#each vehicle}}
+                    <form method="POST" action="/removeVehicle">
+                        <input type="hidden" name="vehicle_id" value="{{_id}}">
+                        <tr><td>{{@index}}</td><td>{{insured}}</td><td>{{gas}}</td><td>{{broken}}</td><td>{{fxf}}</td><td><input class="control-style control-style-red" type="submit" value="DELETE"></td></tr>
+                    </form>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
